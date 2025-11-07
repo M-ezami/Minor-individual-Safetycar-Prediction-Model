@@ -1,0 +1,9 @@
+- finish documentation for fetching the data from fastf1
+- look into the missing values and how to find missing values 
+-  so we have session time its a differnet time stamp than laptime do they allign with  each other
+- how do we find this out: by checking if the amount of session times  3, 3 becasue session time is in 3 secodn incrememtns  = lap time aapproximately
+- first conver laptime into seconds
+- for this we need to group by.... and get count for session time entries per lap...
+- calculate expected  session time  by grouping by ... (same) adn dividing laptime by 3 seconds per entry
+- and then comparing results
+- session_counts['Expected_SessionEntries'] = (telemetry_all.groupby(['Season', 'Round', 'Driver', 'LapNumber'])['LapTime_seconds'].first() / 3).round()
