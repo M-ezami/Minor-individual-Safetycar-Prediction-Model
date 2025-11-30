@@ -7,3 +7,6 @@
 - calculate expected  session time  by grouping by ... (same) adn dividing laptime by 3 seconds per entry
 - and then comparing results
 - session_counts['Expected_SessionEntries'] = (telemetry_all.groupby(['Season', 'Round', 'Driver', 'LapNumber'])['LapTime_seconds'].first() / 3).round()
+
+
+next steps add the columns we want to the specific datasets
